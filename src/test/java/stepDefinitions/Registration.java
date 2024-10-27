@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.RegisterPOM;
+import utilities.ConfigReader;
 import utilities.GWD;
 
 import java.util.List;
@@ -35,20 +36,33 @@ public class Registration {
             String lastName=e.get("lastName");
             if (firstName.equals("firstNameRandom")){
                 firstName=faker.name().firstName();
-                System.out.println(firstName);
                 rg.mySendKeys(rg.firstName, firstName);
             }
 
             if (lastName.equals("lastNameRandom")){
                 lastName=faker.name().lastName();
-                System.out.println(lastName);
                 rg.mySendKeys(rg.lastName, lastName);
             }
         }
     }
 
     @And("The user types their information in the email address and password fields")
-    public void theUserTypesTheirInformationInTheEmailAddressAndPasswordFields() {
+    public void theUserTypesTheirInformationInTheEmailAddressAndPasswordFields(DataTable dt) {
+        List<Map<String, String>> list=dt.asMaps(String.class, String.class);
+
+        for (Map<String ,String> e: list){
+            String emailAddress=e.get("emailAddress");
+            String password=e.get("password");
+            if (emailAddress.equals("emailAddressRandom")){
+                ConfigReader.updateProperty("email");
+                rg.mySendKeys(rg.emailAddress, ConfigReader.getProperty("email"));
+            }
+
+            if (password.equals("passwordRandom")){
+                ConfigReader.updateProperty("password");
+                rg.mySendKeys(rg.password, ConfigReader.getProperty("password"));
+            }
+        }
     }
 
     @And("The user types the same password in the password confirmation field")
