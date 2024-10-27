@@ -40,7 +40,7 @@ public class ConfigReader {
                 properties.setProperty(keyword, email);
                 break;
             case "password":
-                String password = faker.internet().password();
+                String password = faker.internet().password()+".A**";
                 properties.setProperty(keyword, password);
                 break;
         }
