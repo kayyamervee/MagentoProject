@@ -38,6 +38,9 @@ public class LoginPOM extends ParentPage {
     @FindBy(xpath = "(//span[contains(text(),'Welcome')])[1]")
     public WebElement welcomeText;
 
+    @FindBy(xpath = "//*[contains(text(),'incorrect')]")
+    public WebElement warningMessage;
+
     @FindBy(xpath = "//a[@class='action remind']/span")
     public WebElement forgotPasswordButton;
 
@@ -47,15 +50,4 @@ public class LoginPOM extends ParentPage {
     @FindBy(xpath = "//div[contains(text(),'Please enter your email address')]")
     public WebElement forgotPasswordConfirmText;
 
-    public WebElement getWebElement(String strWebElement) {
-        switch (strWebElement) {
-            case "firstName":
-                return this.emailBox;
-            case "lastName":
-                return this.passwordBox;
-
-        }
-        return null;
-
-    }
 }
