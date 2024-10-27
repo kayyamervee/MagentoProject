@@ -5,8 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class Login extends ParentPage {
-        public Login() {
+public class LoginPOM extends ParentPage {
+
+    public LoginPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -45,4 +46,16 @@ public class Login extends ParentPage {
 
     @FindBy(xpath = "//div[contains(text(),'Please enter your email address')]")
     public WebElement forgotPasswordConfirmText;
+
+    public WebElement getWebElement(String strWebElement) {
+        switch (strWebElement) {
+            case "firstName":
+                return this.emailBox;
+            case "lastName":
+                return this.passwordBox;
+
+        }
+        return null;
+
+    }
 }
