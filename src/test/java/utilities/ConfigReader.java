@@ -35,9 +35,9 @@ public class ConfigReader {
     public static void updateProperty(String keyword) {
 
         switch (keyword) {
-            case "username":
-                String name = faker.name().username();
-                properties.setProperty(keyword, name);
+            case "email":
+                String email = faker.internet().emailAddress();
+                properties.setProperty(keyword, email);
                 break;
             case "password":
                 String password = faker.internet().password();
