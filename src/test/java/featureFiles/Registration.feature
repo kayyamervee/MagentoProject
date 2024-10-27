@@ -3,6 +3,7 @@ Feature: Registration
   Scenario: User Registration
     Given The user navigates to the Magento website
     When The user clicks on Create an Account button
+    And The user is redirected to the registration page
     And The user types their information in the first name and last name fields
       | firstName       | lastName       |
       | firstNameRandom | lastNameRandom |
