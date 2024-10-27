@@ -28,7 +28,7 @@ public class GWD {
                 default: threadDriver.set(new ChromeDriver());break;
             }
             threadDriver.get().manage().window().maximize();
-            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigReader.getIntProperty("explicit.wait")));
+            threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigReader.getIntProperty("pageLoadTimeout")));
         }
         return threadDriver.get();
     }
