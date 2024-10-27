@@ -40,8 +40,28 @@ public class ConfigReader {
                 properties.setProperty(keyword, email);
                 break;
             case "password":
-                String password = faker.internet().password()+".A**";
+                String password = faker.internet().password() + ".A**";
                 properties.setProperty(keyword, password);
+                break;
+            case "street":
+                String address1 = faker.address().fullAddress();
+                properties.setProperty(keyword, address1);
+                break;
+            case "company":
+                String company = faker.company().name();
+                properties.setProperty(keyword, company);
+                break;
+            case "city":
+                String city = faker.address().cityName();
+                properties.setProperty(keyword, city);
+                break;
+            case "phoneNumber":
+                String phoneNumber = faker.phoneNumber().cellPhone();
+                properties.setProperty(keyword, phoneNumber);
+                break;
+            case "postalCode":
+                String postalCode = faker.address().zipCode();
+                properties.setProperty(keyword, postalCode);
                 break;
         }
 
