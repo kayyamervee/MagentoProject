@@ -26,15 +26,6 @@ public class LoginPOM extends ParentPage {
     @FindBy(xpath = "(//div[@class='primary']/button)[1]")
     public WebElement signInButton;
 
-    @FindBy(xpath = "//h1[@class='page-title']/span")
-    public WebElement myAccountText;
-
-    @FindBy(xpath = "//div[@class='box-content']/p")
-    public WebElement accountDetails;
-
-    @FindBy(xpath = "//a[@class='logo']")
-    public WebElement logoClick;
-
     @FindBy(xpath = "(//span[contains(text(),'Welcome')])[1]")
     public WebElement welcomeText;
 
