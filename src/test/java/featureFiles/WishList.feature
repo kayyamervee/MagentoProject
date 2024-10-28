@@ -2,10 +2,9 @@ Feature: Wish List Functionality
 
   Background:
     Given The user navigates to the Magento website
-    When The user clicks on the Sign in button
-    And  The user types the email and password with valid credentials
-      | emailValid | passwordValid |
-
+    When The user clicks on the Sign in Link
+    Then The user types username and password with valid credentials
+    And The user clicks on the Sign in button
     Then The user verifies logged in successfully
 
   Scenario: Creating a Favorites List
