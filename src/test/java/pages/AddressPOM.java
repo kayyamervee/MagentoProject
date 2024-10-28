@@ -53,7 +53,7 @@ public class AddressPOM extends ParentPage {
     @FindBy(css = "[class='action save primary']")
     public WebElement saveBtn;
 
-    @FindBy(xpath = "//li[@class='nav item current']/strong")
+    @FindBy(linkText = "My Account")
     public WebElement myAccountBtnLeftNav;
 
     @FindBy(xpath = "(//a[@class='action edit'])[3]")
@@ -67,5 +67,8 @@ public class AddressPOM extends ParentPage {
 
     @FindBy(css = "[class='action-primary action-accept']")
     public WebElement okBtn;
+
+    @FindBy(css = "[class='message info']")
+    public WebElement addressInfoMessage;
 
 }
