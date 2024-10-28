@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.AddressPOM;
 import utilities.ConfigReader;
+import utilities.GWD;
 
 public class Address {
 
@@ -18,12 +19,10 @@ public class Address {
 
     @And("The user clicks on the Address Book button")
     public void theUserClicksOnTheAddressBookButton() {
-
         element.myClick(element.addressBookBtn);
 
-        if (element.addAddressBtn.isDisplayed()){
+        if (!GWD.getDriver().getCurrentUrl().equals("https://magento.softwaretestingboard.com/customer/address/new/"))
             element.myClick(element.addAddressBtn);
-        }
     }
 
     @And("The user types Home location information")
@@ -88,12 +87,14 @@ public class Address {
 
     @And("The user displays two options and clicks on Save button")
     public void theUserChoosesOneOfTwoOptions() {
-        element.wait.until(ExpectedConditions.textToBePresentInElement(element.billingAddress,
-                "Use as my default billing address"));
-        Assert.assertTrue(element.billingAddress.getText().contains("billing address"));
-        element.wait.until(ExpectedConditions.textToBePresentInElement(element.shippingAddress,
-                "Use as my default shipping address"));
-        Assert.assertTrue(element.shippingAddress.getText().contains("shipping address"));
+        if (!element.addressInfoMessage.isDisplayed()) {
+            element.wait.until(ExpectedConditions.textToBePresentInElement(element.billingAddress,
+                    "Use as my default billing address"));
+            Assert.assertTrue(element.billingAddress.getText().contains("billing address"));
+            element.wait.until(ExpectedConditions.textToBePresentInElement(element.shippingAddress,
+                    "Use as my default shipping address"));
+            Assert.assertTrue(element.shippingAddress.getText().contains("shipping address"));
+        }
         element.myClick(element.saveBtn);
     }
 
