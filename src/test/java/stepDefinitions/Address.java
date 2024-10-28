@@ -22,7 +22,7 @@ public class Address {
         element.myClick(element.addressBookBtn);
 
         if (!GWD.getDriver().getCurrentUrl().equals("https://magento.softwaretestingboard.com/customer/address/new/"))
-            element.myClick(element.addAddressBtn);
+            element.jsClick(element.addAddressBtn);
     }
 
     @And("The user types Home location information")
@@ -58,7 +58,7 @@ public class Address {
     @When("The user clicks on My Account button in the Left Nav and clicks on Edit Address button")
     public void theUserClicksOnChangeBillingAddressButton() {
         element.myClick(element.myAccountBtnLeftNav);
-        element.myClick(element.editAddressBtn);
+        element.jsClick(element.editAddressBtn);
     }
 
     @And("The user types Company location information")
@@ -105,7 +105,7 @@ public class Address {
 
     @Then("The user clicks on Delete button and displays verifies message")
     public void theUserClicksOnDeleteButtonAndDisplaysVerifiesMessage() {
-        element.myClick(element.deleteBtn);
+        element.jsClick(element.deleteBtn);
         element.myClick(element.okBtn);
         element.verifyContainsText(element.confirmMessage,"You deleted");
     }
