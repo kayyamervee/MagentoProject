@@ -10,14 +10,13 @@ Feature: Wish List Functionality
   Scenario: Creating a Favorites List
     When The user goes to the product they want to add to their favorites
     And The user clicks on the Add to Favorites button
-      | addFavoritesButton |
-
     And The user confirms they added the product to favorites
-    And The user clicks on the My Account button
+    And The user clicks on the Dropdown Menu and My Account button
+      | dropDownMenu    |
       | myAccountButton |
 
     When The user clicks on the My Wish List button
-      | addFavoritesButton |
+      | wishListButton |
 
     Then The user verifies the product in their favorites list
     When The user hovers over the product they view the remove from favorites icon
