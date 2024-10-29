@@ -19,11 +19,11 @@ public class WishListPOM extends ParentPage{
     @FindBy(xpath = "(//ul[@class='header links']//a)[1]")
     public WebElement myAccountBtn;
 
-    @FindBy(css = "li[class='product-item']")
+    @FindBy(css = "[class='product-item-name']")
     public List<WebElement> products;
 
     @FindBy(css = "[class='product-item-link']")
-    public List<WebElement> productName;
+    public WebElement wishListProduct;
 
     @FindBy(xpath = "//a[@class='action towishlist']")
     public List<WebElement> wishListBtn;
@@ -34,7 +34,7 @@ public class WishListPOM extends ParentPage{
     @FindBy(css = "[data-bind='html: $parent.prepareMessageForHtml(message.text)']")
     public WebElement wishListConfirmMessage;
 
-    @FindBy(xpath = "//div[@class='actions-secondary']/a")
+    @FindBy(css = "a[title='Remove Item']")
     public WebElement deleteWishListBtn;
 
     public WebElement getWebElement(String strWebElement) {
@@ -43,7 +43,7 @@ public class WishListPOM extends ParentPage{
                 return this.myAccountBtn;
             case "wishListButton":
                 return this.myAccountWishListBtn;
-            case "dropDownMenu ":
+            case "dropDownMenu":
                 return this.dropDownMenuBtn;
             case "removeFavoritesButton":
                 return this.deleteWishListBtn;
