@@ -8,21 +8,23 @@ Feature: Shopping Cart Functionality
     Then The user verifies logged in successfully
 
   Scenario: Shopping Card Adding and Removing Items
+    Given The user starts browsing the main page
     When The user selects first product by selecting the size and color of the product
       | addToCartBtn |
 
     Then The user verifies that the product has been successfully added
-    When  The user selects second product by selecting the size and color of the product
+    When The user selects second product by selecting the size and color of the product
       | addToCartBtn |
 
     Then The user verifies that the product has been successfully added
-    And The user clicks on the Shopping Cart
+    And  The user clicks on the Shopping Cart
       | shoppingCartLink |
 
     And The user removes a product from the Shopping Cart
       | deleteBtn |
+
     And The user edits the product from the Shopping Cart
       | editBtn |
+
     Then The user clicks on the Update Shopping Cart
       | updateShoppingCartBtn |
-

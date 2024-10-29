@@ -78,5 +78,36 @@ public class ConfigReader {
             throw new RuntimeException(e);
         }
     }
+
+    public static void updateRandom(String keyword, int element){
+        int random=(int)(Math.random()*element);
+        String randomStr=String.valueOf(random);
+        properties.setProperty(keyword,randomStr);
+
+        FileOutputStream outputFile = null;
+        try {
+            outputFile = new FileOutputStream("configuration.properties");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            properties.store(outputFile, null);
+            outputFile.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static int getRandomProduct() {
+        String randomStr = ConfigReader.getProperty("productRandom");
+
+        return Integer.parseInt(randomStr);
+    }
+
+    public static int getRandomSize() {
+        String randomStr = ConfigReader.getProperty("sizeRandom");
+
+        return Integer.parseInt(randomStr);
+    }
 }
 
