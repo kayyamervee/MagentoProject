@@ -19,16 +19,16 @@ public class ShoppingCartPOM extends ParentPage {
     @FindBy(xpath = "//div[@class='content-heading']//p")
     public WebElement hotSellerDetailText;
 
-    @FindBy(xpath = "//ol[@class='product-items widget-product-grid']//li")
+    @FindBy(css = "[class='product-item']")
     public List<WebElement> productList;
 
-    @FindBy(xpath = "//div[@class='swatch-option text']")
+    @FindBy(css = "[class='swatch-option text']")
     public List<WebElement> sizeList;
 
-    @FindBy(xpath = "(//div[@class='swatch-attribute-options clearfix'])[2]/div")
+    @FindBy(css = "[class='swatch-option color']")
     public List<WebElement> colorList;
 
-    @FindBy(xpath = "(//button[@type='submit']/span)[2]")
+    @FindBy(css = "[title='Add to Cart']")
     public WebElement addToCartButton;
 
     @FindBy(xpath = "//*[contains(text(),'You added')]")
