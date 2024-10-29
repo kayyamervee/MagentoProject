@@ -47,8 +47,8 @@ public class WishList {
 
     @Then("The user verifies the product in their favorites list")
     public void theUserVerifiesTheProductInTheirFavoritesList() {
-        element.wait.until(ExpectedConditions.visibilityOf(element.products.get(random)));
-        Assert.assertTrue(element.products.get(random).isDisplayed());
+        element.wait.until(ExpectedConditions.visibilityOf(element.product));
+        Assert.assertTrue(element.product.isDisplayed());
     }
 
     @When("The user hovers over the product they view the remove from favorites icon")
