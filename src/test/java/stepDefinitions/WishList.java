@@ -47,7 +47,6 @@ public class WishList {
         dataTableClick(links);
     }
 
-
     @Then("The user verifies the product in their favorites list")
     public void theUserVerifiesTheProductInTheirFavoritesList() {
         Assert.assertTrue(element.products.get(random).isDisplayed());
