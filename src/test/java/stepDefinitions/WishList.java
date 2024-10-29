@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.WishListPOM;
 import utilities.GWD;
@@ -20,7 +21,6 @@ public class WishList {
         new Actions(GWD.getDriver())
                 .moveToElement(element.products.get(random))
                 .build().perform();
-
     }
 
     @And("The user clicks on the Add to Favorites button")
@@ -47,6 +47,7 @@ public class WishList {
 
     @Then("The user verifies the product in their favorites list")
     public void theUserVerifiesTheProductInTheirFavoritesList() {
+        element.wait.until(ExpectedConditions.visibilityOf(element.products.get(random)));
         Assert.assertTrue(element.products.get(random).isDisplayed());
     }
 
