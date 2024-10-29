@@ -7,9 +7,9 @@ import utilities.GWD;
 
 import java.util.List;
 
-public class ShoppingCart_POM extends ParentPage {
+public class ShoppingCartPOM extends ParentPage {
 
-    public ShoppingCart_POM() {
+    public ShoppingCartPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -25,7 +25,7 @@ public class ShoppingCart_POM extends ParentPage {
     @FindBy(xpath = "//div[@class='swatch-option text']")
     public List<WebElement> sizeList;
 
-    @FindBy(xpath = "//div[@class='swatch-option color']")
+    @FindBy(xpath = "(//div[@class='swatch-attribute-options clearfix'])[2]/div")
     public List<WebElement> colorList;
 
     @FindBy(xpath = "(//button[@type='submit']/span)[2]")
@@ -64,8 +64,11 @@ public class ShoppingCart_POM extends ParentPage {
     @FindBy(xpath = "(//button[@name='update_cart_action'])[2]")
     public WebElement updateShoppingCartBtn;
 
-
-
-
+    public WebElement getWebElement(String strWebElement) {
+        switch (strWebElement) {
+            case "addToCartBtn": return this.addToCartButton;
+        }
+        return null;
+    }
 
 }
