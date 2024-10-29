@@ -22,6 +22,9 @@ public class WishListPOM extends ParentPage {
     @FindBy(css = "[class='product-item-name']")
     public List<WebElement> products;
 
+    @FindBy(css = "[class='product-item']")
+    public WebElement product;
+
     @FindBy(css = "[class='product-item-link']")
     public WebElement wishListProduct;
 
