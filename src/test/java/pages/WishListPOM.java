@@ -19,7 +19,7 @@ public class WishListPOM extends ParentPage {
     @FindBy(xpath = "(//ul[@class='header links']//a)[1]")
     public WebElement myAccountBtn;
 
-    @FindBy(css = "[class='product-item-name']")
+    @FindBy(css = "li[class='product-item'] a[class='product-item-link']")
     public List<WebElement> products;
 
     @FindBy(css = "[class='product-item']")
