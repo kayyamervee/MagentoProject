@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.ShoppingCartPOM;
+import utilities.ConfigReader;
 import utilities.GWD;
 
 import java.util.List;
@@ -28,30 +29,34 @@ public class ShoppingCart {
 
     @When("The user selects first product by selecting the size and color of the product")
     public void theUserSelectsFirstProductBySelectingTheSizeAndColorOfTheProduct(DataTable dtBtn) {
-//        List<String> button = dtBtn.asList();
-//
-//        for (int i = 0; i < shopping.productList.size(); i++) {
-//            int randomProduct = shopping.randomGenerator(shopping.productList.size());
-//            int randomColor = shopping.randomGenerator(shopping.colorList.size());
-//            int randomSize = shopping.randomGenerator(shopping.sizeList.size());
-//
-//            String selectedProduct = shopping.productList.get(randomProduct).getText();
-//
-//            actions.moveToElement(shopping.productList.get(randomProduct)).click().perform();
-//            shopping.myClick(shopping.sizeList.get(randomSize));
-//            shopping.myClick(shopping.colorList.get(randomColor));
-//            if (!shopping.sizeList.get(randomSize).isDisplayed() || shopping.colorList.get(randomColor).isDisplayed()) {
-//                for (int i = 0; i < button.size(); i++) {
-//                    shopping.myClick(shopping.getWebElement(button.get(i)));
-//                }
-//            }
-//        }
-//
-//        shopping.Wait(3);
-//
-//        for (int i = 0; i < button.size(); i++) {
-//            shopping.myClick(shopping.getWebElement(button.get(i)));
-//        }
+        List<String> button = dtBtn.asList();
+
+        ConfigReader.updateRandom("productRandom", shopping.productList.size());
+        ConfigReader.updateRandom("sizeRandom", shopping.colorList.size());
+        ConfigReader.updateRandom("colorRandom", shopping.sizeList.size());
+
+        int randomProduct = shopping.randomGenerator(shopping.productList.size());
+        int randomColor = shopping.randomGenerator(shopping.colorList.size());
+        int randomSize = shopping.randomGenerator(shopping.sizeList.size());
+
+        String selectedProduct = shopping.productList.get(randomProduct).getText();
+        shopping.scrollToElement(shopping.productList.get(randomProduct));
+        actions.moveToElement(shopping.productList.get(randomProduct)).perform();
+
+        if (!shopping.sizeList.get(randomSize).isDisplayed()) {
+            shopping.myClick(shopping.productList.get(randomProduct));
+            for (int i = 0; i < button.size(); i++) {
+                shopping.myClick(shopping.getWebElement(button.get(i)));
+            }
+        } else {
+            shopping.myClick(shopping.productList.get(randomProduct));
+            shopping.myClick(shopping.sizeList.get(randomSize));
+            shopping.myClick(shopping.colorList.get(randomColor));
+
+            for (int i = 0; i < button.size(); i++) {
+                shopping.myClick(shopping.getWebElement(button.get(i)));
+            }
+        }
 
     }
 
@@ -85,6 +90,4 @@ public class ShoppingCart {
     @Then("The user clicks on the Update Shopping Cart")
     public void theUserClicksOnTheUpdateShoppingCart() {
     }
-
-
 }
