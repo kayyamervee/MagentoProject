@@ -111,19 +111,15 @@ public class Address {
             ConfigReader.updateProperty("company");
             element.mySendKeys(element.company,ConfigReader.getProperty("company"));
 
-            ConfigReader.updateProperty("phoneNumber");
             element.mySendKeys(element.telephone,ConfigReader.getProperty("phoneNumber"));
 
-            ConfigReader.updateProperty("street");
             element.mySendKeys(element.streetAddress,ConfigReader.getProperty("street"));
 
-            ConfigReader.updateProperty("city");
             element.mySendKeys(element.city,ConfigReader.getProperty("city"));
 
             element.myClick(element.selectRegion);
             element.selectByText(element.selectRegion,"Michigan");
 
-            ConfigReader.updateProperty("postalCode");
             element.mySendKeys(element.zipCode,ConfigReader.getProperty("postalCode"));
 
             element.myClick(element.country);
