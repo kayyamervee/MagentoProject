@@ -40,5 +40,4 @@ public class LoginPOM extends ParentPage {
 
     @FindBy(xpath = "//div[contains(text(),'Please enter your email address')]")
     public WebElement forgotPasswordConfirmText;
-
 }

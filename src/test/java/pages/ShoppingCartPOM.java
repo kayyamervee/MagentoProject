@@ -37,20 +37,11 @@ public class ShoppingCartPOM extends ParentPage {
     @FindBy(linkText = "shopping cart")
     public WebElement shoppingCartLink;
 
-    @FindBy(xpath = "//span[.='Shopping Cart']")
-    public WebElement shoppingCartTitle;
-
-    @FindBy(xpath = "//tbody[@class='cart item']")
-    public List<WebElement> shoppingCartProducts;
-
-    @FindBy(xpath = "(//a[@title='Remove item'])[4]")
+    @FindBy(xpath = "//a[@class='action action-delete']")
     public WebElement deleteProductButton;
 
-    @FindBy(css = "[class='action action-edit']")
-    public List<WebElement> editProductButton;
-
-    @FindBy(xpath = "//span[.='Qty']")
-    public WebElement QtyText;
+    @FindBy(css = "a[class='action action-edit']")
+    public WebElement editProductButton;
 
     @FindBy(xpath = "(//div[@class='control'])[2]/input")
     public WebElement QtyBox;
@@ -67,8 +58,11 @@ public class ShoppingCartPOM extends ParentPage {
     public WebElement getWebElement(String strWebElement) {
         switch (strWebElement) {
             case "addToCartBtn": return this.addToCartButton;
+            case "shoppingCartLink": return this.shoppingCartLink;
+            case "deleteBtn": return this.deleteProductButton;
+            case "editBtn": return this.editProductButton;
+            case "updateShoppingCartBtn": return this.updateShoppingCartBtn;
         }
         return null;
     }
-
 }
