@@ -70,4 +70,7 @@ public class AddressPOM extends ParentPage {
 
     @FindBy(css = "[class='message info']")
     public WebElement addressInfoMessage;
+
+    @FindBy(css = "p[class='empty']")
+    public WebElement deleteEmpty;
 }

@@ -105,8 +105,39 @@ public class Address {
 
     @Then("The user clicks on Delete button and displays verifies message")
     public void theUserClicksOnDeleteButtonAndDisplaysVerifiesMessage() {
-        element.jsClick(element.deleteBtn);
-        element.myClick(element.okBtn);
-        element.verifyContainsText(element.confirmMessage,"You deleted");
+        if (element.deleteEmpty.isDisplayed()){
+            element.jsClick(element.addAddressBtn);
+
+            ConfigReader.updateProperty("company");
+            element.mySendKeys(element.company,ConfigReader.getProperty("company"));
+
+            ConfigReader.updateProperty("phoneNumber");
+            element.mySendKeys(element.telephone,ConfigReader.getProperty("phoneNumber"));
+
+            ConfigReader.updateProperty("street");
+            element.mySendKeys(element.streetAddress,ConfigReader.getProperty("street"));
+
+            ConfigReader.updateProperty("city");
+            element.mySendKeys(element.city,ConfigReader.getProperty("city"));
+
+            element.myClick(element.selectRegion);
+            element.selectByText(element.selectRegion,"Michigan");
+
+            ConfigReader.updateProperty("postalCode");
+            element.mySendKeys(element.zipCode,ConfigReader.getProperty("postalCode"));
+
+            element.myClick(element.country);
+            element.selectByText(element.country,"United States");
+
+            element.myClick(element.saveBtn);
+
+            element.jsClick(element.deleteBtn);
+            element.myClick(element.okBtn);
+            element.verifyContainsText(element.confirmMessage,"You deleted");
+        }else {
+            element.jsClick(element.deleteBtn);
+            element.myClick(element.okBtn);
+            element.verifyContainsText(element.confirmMessage,"You deleted");
+        }
     }
 }
