@@ -49,9 +49,6 @@ public class TABMenuPOM extends ParentPage{
     @FindBy(xpath = "(//ol[@class='items']//a)[4]")
     public WebElement categoryButtonBrasAndTanks;
 
-    @FindBy(xpath = "//a[@id='ui-id-10']//span")
-    public WebElement hoverOverBottomsButton;
-
     @FindBy(xpath = "(//li[@class='item']/a)[2]")
     public WebElement bottomsButton;
 
