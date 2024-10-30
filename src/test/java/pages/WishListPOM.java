@@ -53,5 +53,4 @@ public class WishListPOM extends ParentPage {
         }
         return null;
     }
-
 }
