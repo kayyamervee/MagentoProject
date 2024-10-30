@@ -9,7 +9,6 @@ Feature: TAB Menu Functionality
 
   Scenario: Access to Tab Menu links
     Given The user main categories should be displayed in the TAB menu
-
     When The user clicks on the TAB Menu button
       | whatsNewButton |
 
@@ -19,13 +18,13 @@ Feature: TAB Menu Functionality
       | womenButton |
 
     Then The user confirms that they accessed the Women page
-    And The user views and clicks on the Tops and Bottoms buttons
+    And The user displays and clicks the sub-buttons of the Women button
 
     When The user clicks on the TAB Menu button
       | menButton |
 
     Then The user confirms that they accessed the Men page
-    And The user views and clicks on the Tops and Bottoms buttons
+    And The user displays and clicks the sub-buttons of the Men button
 
     When The user clicks on the TAB Menu button
       | gearButton |
