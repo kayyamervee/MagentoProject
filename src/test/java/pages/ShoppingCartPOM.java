@@ -37,12 +37,6 @@ public class ShoppingCartPOM extends ParentPage {
     @FindBy(linkText = "shopping cart")
     public WebElement shoppingCartLink;
 
-    @FindBy(xpath = "//span[.='Shopping Cart']")
-    public WebElement shoppingCartTitle;
-
-    @FindBy(xpath = "//tbody[@class='cart item']")
-    public List<WebElement> shoppingCartProducts;
-
     @FindBy(xpath = "//a[@class='action action-delete']")
     public WebElement deleteProductButton;
 

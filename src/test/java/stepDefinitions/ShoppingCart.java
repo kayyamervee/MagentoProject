@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.ShoppingCartPOM;
-import utilities.ConfigReader;
 import utilities.GWD;
 
 import java.util.List;
@@ -21,9 +20,7 @@ public class ShoppingCart {
     public void theUserStartsBrowsingTheMainPage() {
         shopping.wait.until(ExpectedConditions.visibilityOf(shopping.hotSellerText));
         shopping.scrollToElement(shopping.hotSellerText);
-        System.out.println(shopping.hotSellerText.getText());
         shopping.verifyContainsText(shopping.hotSellerText, "Hot Seller");
-        System.out.println(shopping.hotSellerDetailText.getText());
         shopping.verifyContainsText(shopping.hotSellerDetailText, "Here is");
     }
 
