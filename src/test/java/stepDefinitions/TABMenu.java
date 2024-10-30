@@ -74,9 +74,9 @@ public class TABMenu {
         tb.verifyContainsText(tb.productTextControl, tb.productTextControl.getText());
         tb.myClick(tb.exitButton);
 
-        new Actions(GWD.getDriver()).moveToElement(tb.womenButtonBottoms).perform();
+        tb.myClick(tb.womenButton);
 
-        tb.myClick(tb.hoverOverBottomsButton);
+        tb.myClick(tb.bottomsButton);
         tb.verifyContainsText(tb.pageTextControl, tb.pageTextControl.getText());
 
         tb.jsClick(tb.categoryButton);
@@ -126,9 +126,9 @@ public class TABMenu {
         tb.verifyContainsText(tb.productTextControl, tb.productTextControl.getText());
         tb.myClick(tb.exitButton);
 
-        new Actions(GWD.getDriver()).moveToElement(tb.menButton).perform();
+        tb.myClick(tb.menButton);
 
-        tb.myClick(tb.hoverOverBottomsButton);
+        tb.myClick(tb.bottomsButton);
         tb.verifyContainsText(tb.pageTextControl, tb.pageTextControl.getText());
 
         tb.jsClick(tb.categoryButton);
