@@ -28,9 +28,6 @@ public class TABMenuPOM extends ParentPage{
     @FindBy(xpath = "//li[@class='item']/a")
     public WebElement topsButton;
 
-    @FindBy(xpath = "//*[text()='Women']")
-    public WebElement womenButtonBottoms;
-
     @FindBy(xpath = "//div[@class='filter-options-title']")
     public WebElement categoryButton;
 
@@ -54,6 +51,9 @@ public class TABMenuPOM extends ParentPage{
 
     @FindBy(xpath = "//a[@id='ui-id-10']//span")
     public WebElement hoverOverBottomsButton;
+
+    @FindBy(xpath = "(//li[@class='item']/a)[2]")
+    public WebElement bottomsButton;
 
     @FindBy(xpath = "//span[text()='Men']")
     public WebElement menButton;
