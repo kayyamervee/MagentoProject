@@ -14,5 +14,3 @@ Feature: Login Functionality
     And The user clicks on Sign in button
     Then The user verifies the warning message
     And  The user clicks on the Forgot Password button
-
-
