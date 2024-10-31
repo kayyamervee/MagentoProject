@@ -1,4 +1,4 @@
-Feature: TAB Menu Functionality
+Feature: TAB Menu
 
   Background:
     Given The user navigates to the Magento website
