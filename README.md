@@ -13,7 +13,7 @@
 - **US707** |  Product Search : Users should be able to search for products using SKU.
 - **US708** |  Wishlist Functionality : Users should be able to create and manage a wishlist.
 
-  ## Technologies and Tools Used
+## Technologies and Tools Used
 
 - **Java** - Programming language
 - **Selenium** - Web browser automation
