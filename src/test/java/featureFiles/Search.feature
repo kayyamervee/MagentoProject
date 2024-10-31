@@ -3,15 +3,18 @@ Feature: Product Search Functionality
   Background:
     Given The user navigates to the Magento website
     When  The user clicks on the Sign in Link
-    And   The user types the email and password with valid credentials
-          | emailValid | passwordValid |
+    Then  The user types username and password with valid credentials
+    And   The user clicks on the Sign in button
+    Then  The user verifies logged in successfully
 
-  Scenario:
-    When The user enters a valid SKU "MJ08"
-    And  The user clicks the "Search" button
-    Then "Lando Gym Jacket" should be in the search results for the user
-    And  The user verifies the SKU is "MJ08"
-    When The user enters invalid SKU
-    And  The user clicks "Search"
-    And  The user views a "Your search returned no result." message
-
+  Scenario: Product Search by Product Number
+    When The user enters a product number in the search bar
+    And  The user clicks the search button
+         | searchButton |
+    Then The user verifies that the product appears in the search results
+    When The user navigates to Jackets from the tab menu
+    Then The user verifies the product number on the product page
+    When The user enters an invalid product number
+    And  The user clicks the search button
+         | searchButton |
+    Then The user receives a message indicating that no products were found
