@@ -40,6 +40,12 @@ public class ParentPage {
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 
+    public void verifyEqualsText(WebElement element,String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element, value));
+        Assert.assertTrue(element.getText().toLowerCase().equals(value.toLowerCase()));
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+    }
+
     public void selectByText(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
         Select select = new Select(element);

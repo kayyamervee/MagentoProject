@@ -8,11 +8,11 @@ Feature: Order Functionality
     Then The user verifies logged in successfully
 
   Scenario: Successful order
-    When The user goes to the products and adds the items to cart icon and clicks on the cart icon
+    When The user navigate to the products and adds the items to shopping cart and clicks on the cart icon
       | addToCart    |
       | shoppingCart |
 
-    Then The user displays the product in the cart icon and updates the quantity it wants
+    Then The user displays the product in the shopping cart and updates the quantity they want
     And  The user clicks on the Proceed to Checkout
       | proceedToCheckout |
 
