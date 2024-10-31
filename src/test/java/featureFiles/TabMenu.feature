@@ -8,7 +8,7 @@ Feature: TAB Menu Functionality
     Then The user verifies logged in successfully
 
   Scenario: Access to Tab Menu links
-    Given The user main categories should be displayed in the TAB menu
+    Given The user displays the TAB menu on the home page
     When The user clicks on the TAB Menu button
       | whatsNewButton |
 
