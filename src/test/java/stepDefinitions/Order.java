@@ -14,7 +14,7 @@ import java.util.List;
 public class Order {
     OrderPOM element = new OrderPOM();
 
-    @When("The user goes to the products and adds the items to cart icon and clicks on the cart icon")
+    @When("The user navigate to the products and adds the items to shopping cart and clicks on the cart icon")
     public void theUserGoesToTheProductsAndAddsTheItemsToCardIcon(DataTable dt) {
         List<String> buttons = dt.asList(String.class);
         int randomProduct = element.randomGenerator(element.products.size());
@@ -45,7 +45,7 @@ public class Order {
         }
     }
 
-    @Then("The user displays the product in the cart icon and updates the quantity it wants")
+    @Then("The user displays the product in the shopping cart and updates the quantity they want")
     public void theUserDisplaysTheProductInTheCardIconAndUpdatesTheQuantityItWants() {
         element.mySendKeys(element.inputQuantity, "2");
     }

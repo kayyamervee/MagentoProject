@@ -51,7 +51,7 @@ public class WishList {
         Assert.assertTrue(element.product.isDisplayed());
     }
 
-    @When("The user hovers over the product they view the remove from favorites icon")
+    @When("The user hovers over the product and displays the remove from favorites icon")
     public void theUserHoversOverTheProductTheyViewTheRemoveFromFavoritesIcon() {
         new Actions(GWD.getDriver())
                 .moveToElement(element.wishListProduct)
