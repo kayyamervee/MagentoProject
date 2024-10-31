@@ -54,5 +54,18 @@
 
 **3. Smoke and Regression Testing:** Separate classes were created for smoke and regression test cases within the runners package.
 
+[Ümmühan Teke](https://github.com/UmmuhanTeke) 
+## User Stories & Contributors
+
+| Contributor                                               |               Role                    |   User Stories            |
+|-----------------------------------------------------------|---------------------------------------|---------------------------|
+| [Merve Kaya](https://github.com/kayyamervee)              | Project Lead & QA Automation Engineer |  [US702 - US705]          |
+| [Sefa Kahraman](https://github.com/SefaKahramann)         | QA Automation Engineer                |  [US703 - US706 - US708]  |
+| [Ümmühan Teke](https://github.com/UmmuhanTeke)            | QA Automation Engineer                |  [US701 - US704 - US708]  |
+| [Songül Çam](https://github.com/songulcam)                | QA Automation Engineer                |  [US707]                  |
+
+## License  
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
