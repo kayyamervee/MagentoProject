@@ -57,7 +57,6 @@ public class Login {
     @Then("The user verifies the warning message")
     public void theUserVerifiesTheWarningMessage() {
         login.wait.until(ExpectedConditions.visibilityOf(login.warningMessage));
-        System.out.println(login.warningMessage.getText());
         login.verifyContainsText(login.warningMessage, "incorrect");
     }
 
