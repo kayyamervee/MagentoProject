@@ -54,7 +54,6 @@
 
 **3. Smoke and Regression Testing:** Separate classes were created for smoke and regression test cases within the runners package.
 
-[Ümmühan Teke](https://github.com/UmmuhanTeke) 
 ## User Stories & Contributors
 
 | Contributor                                               |               Role                    |   User Stories            |
