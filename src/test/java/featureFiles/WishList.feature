@@ -19,7 +19,7 @@ Feature: Wish List Functionality
       | wishListButton |
 
     Then The user verifies the product in their favorites list
-    When The user hovers over the product they view the remove from favorites icon
+    When The user hovers over the product and displays the remove from favorites icon
     Then The user clicks the Remove from Favorites button
       | removeFavoritesButton |
 
