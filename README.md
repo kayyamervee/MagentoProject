@@ -29,6 +29,30 @@
 - **Page Object Model (POM)** - Test Automation Pattern
 - **Grasshopper** -	HTML & PDF Report tool.
 
+## Prerequisites
+
+- **Java Development Kit (JDK):** Installed on your system for writing and compiling Java code.
+
+- **IDE (Integrated Development Environment):** Choose IntelliJ IDEA for Java development.
+
+- **Git:** Installed for version control, it is essential for managing your project's source code on GitHub.
+
+- **Selenium WebDriver:** Become familiar with its usage and basic automation techniques.
+
+- **TestNG:** Understand its annotations and how to write test cases using this framework.
+
+- **Page Object Model (POM):** Understand and implement this pattern in your test automation framework.
+
+- **JIRA & ZEPHYR Test Management Tool:** If using the system, ensure access to and understanding of test case creation, management, and defect reporting.
+  
+
+## Project Requirements
+
+**1. Page Object Model (POM):** Utilize the POM design pattern for structuring the test cases.
+
+**2. Parallel Testing:** Execute tests in parallel on multiple browsers (Chrome and Firefox).
+
+**3. Smoke and Regression Testing:** Separate classes were created for smoke and regression test cases within the runners package.
 
 
 
