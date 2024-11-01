@@ -12,10 +12,12 @@ Feature: Product Search Functionality
     When The user enters a product number in the search bar
     And  The user clicks the search button
          | searchButton |
+
     Then The user verifies that the product appears in the search results
     When The user navigates to Jackets from the tab menu
     Then The user verifies the product number on the product page
     When The user enters an invalid product number
     And  The user clicks the search button
          | searchButton |
+
     Then The user receives a message indicating that no products were found
