@@ -4,6 +4,8 @@
 
 ### This repository contains user stories and acceptance criteria for various functionalities within the Magento e-commerce platform. These user stories focus on enhancing user experience through registration, login, address management, product search, order placement, and wishlist features.
 
+**The environment we will use for this sprint:** [Magento Project](https://magento.softwaretestingboard.com/)
+
 ## User Story Summary
 
 - **US701** |  User Registration : New users should be able to create an account to gain access to the platform.
