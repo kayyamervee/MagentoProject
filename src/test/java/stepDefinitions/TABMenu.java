@@ -14,7 +14,7 @@ import java.util.List;
 public class TABMenu {
     TABMenuPOM tb = new TABMenuPOM();
 
-    @Given("The user main categories should be displayed in the TAB menu")
+    @Given("The user displays the TAB menu on the home page")
     public void theUserMainCategoriesShouldBeDisplayedInTheTABMenu() {
         List<WebElement> tabMenuConfirm = tb.tabMenuConfirm;
 
