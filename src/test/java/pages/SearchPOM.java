@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
-import java.util.List;
 
 public class SearchPOM extends ParentPage {
     public SearchPOM() {
@@ -22,9 +21,6 @@ public class SearchPOM extends ParentPage {
 
     @FindBy(css = "a[class='product-item-link']")
     public WebElement landoGymJacketText;
-
-    @FindBy(xpath = "//div[text()='MJ08']")
-    public WebElement productNumber;
 
     @FindBy(xpath = "//div[@class='message notice']")
     public WebElement message;

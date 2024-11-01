@@ -1,3 +1,4 @@
+@Smoke @Regression
 Feature: Shopping Cart Functionality
 
   Background:

@@ -1,3 +1,4 @@
+@Smoke @Regression
 Feature: Registration
 
   Scenario: User Registration

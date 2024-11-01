@@ -1,3 +1,4 @@
+@Smoke @Regression
 Feature: Wish List Functionality
 
   Background:

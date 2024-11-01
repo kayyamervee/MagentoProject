@@ -1,3 +1,4 @@
+@Smoke @Regression
 Feature: Product Search Functionality
 
   Background:

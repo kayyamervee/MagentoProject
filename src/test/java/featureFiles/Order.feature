@@ -1,3 +1,4 @@
+@Smoke @Regression
 Feature: Order Functionality
 
   Background:
@@ -8,7 +9,7 @@ Feature: Order Functionality
     Then The user verifies logged in successfully
 
   Scenario: Successful order
-    When The user navigate to the products and adds the items to shopping cart and clicks on the cart icon
+    When The user navigates to the products and adds the items to shopping cart and clicks on the cart icon
       | addToCart    |
       | shoppingCart |
 

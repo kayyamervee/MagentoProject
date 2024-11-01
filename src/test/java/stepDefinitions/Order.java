@@ -14,7 +14,7 @@ import java.util.List;
 public class Order {
     OrderPOM element = new OrderPOM();
 
-    @When("The user navigate to the products and adds the items to shopping cart and clicks on the cart icon")
+    @When("The user navigates to the products and adds the items to shopping cart and clicks on the cart icon")
     public void theUserGoesToTheProductsAndAddsTheItemsToCardIcon(DataTable dt) {
         List<String> buttons = dt.asList(String.class);
         int randomProduct = element.randomGenerator(element.products.size());

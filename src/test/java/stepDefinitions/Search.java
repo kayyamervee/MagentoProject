@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.SearchPOM;
 import utilities.ConfigReader;
@@ -39,8 +38,8 @@ public class Search {
         new Actions(GWD.getDriver()).moveToElement(elements.menButton).perform();
         elements.verifyContainsText(elements.menButton,elements.menButton.getText());
 
-        elements.verifyContainsText(elements.topsButton,elements.topsButton.getText());
         new Actions(GWD.getDriver()).moveToElement(elements.topsButton).perform();
+        elements.verifyContainsText(elements.topsButton,elements.topsButton.getText());
 
         elements.verifyContainsText(elements.jacketButton,elements.jacketButton.getText());
         elements.myClick(elements.jacketButton);
@@ -55,7 +54,7 @@ public class Search {
     @When("The user enters an invalid product number")
     public void the_user_enters_an_invalid_product_number() {
         elements.myClick(elements.searchText);
-        elements.mySendKeys(elements.searchText, ConfigReader.getProperty("InvalidProductCode"));
+        elements.mySendKeys(elements.searchText, ConfigReader.getProperty("invalidProductCode"));
     }
 
     @Then("The user receives a message indicating that no products were found")
