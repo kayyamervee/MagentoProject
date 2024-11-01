@@ -1,5 +1,5 @@
 @Smoke @Regression
-: Address Addition
+Feature: Address Addition
 
   Background:
     Given The user navigates to the Magento website
