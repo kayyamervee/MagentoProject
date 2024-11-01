@@ -1,10 +1,10 @@
 # Magento E-Commerce Automation Testing
 
-### **This project is for educational purposes and is intended to help participants test their own skills.*
-
+ ### **This project is for educational purposes and is intended to help participants test their own skills.*
+  
 ### This repository contains user stories and acceptance criteria for various functionalities within the Magento e-commerce platform. These user stories focus on enhancing user experience through registration, login, address management, product search, order placement, and wishlist features.
 
-**The environment we will use for this sprint:** [Magento Project](https://magento.softwaretestingboard.com/)
+- **The environment we will use for this sprint:** [Magento Project](https://magento.softwaretestingboard.com/)
 
 ## User Story Summary
 
