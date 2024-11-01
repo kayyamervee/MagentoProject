@@ -28,7 +28,7 @@ public class Search {
 
     @Then("The user verifies that the product appears in the search results")
     public void the_user_verifies_that_the_product_appears_in_the_search_results() {
-        elements.verifyContainsText(elements.landoGymJacketText,"Lando Gym Jacket");
+        elements.verifyEqualsText(elements.landoGymJacketText,"Lando Gym Jacket");
     }
 
     @When("The user navigates to Jackets from the tab menu")
@@ -60,6 +60,6 @@ public class Search {
 
     @Then("The user receives a message indicating that no products were found")
     public void the_user_receives_a_message_indicating_that_no_products_were_found() {
-        elements.verifyContainsText(elements.message,"Your search returned no results.");
+        elements.verifyEqualsText(elements.message,"Your search returned no results.");
     }
 }
